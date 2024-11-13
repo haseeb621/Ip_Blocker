@@ -48,8 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'app.middleware.IpMiddleWare',
-    'app.middleware.Country_ip_Middleware'
+    # 'app.middleware.IpMiddleWare',
+    'app.middleware.CountryIpMiddleware'
 ]
 
 ROOT_URLCONF = 'Ip_Blocker.urls'
@@ -126,5 +126,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # settings.py
-GEOIP_PATH = BASE_DIR / "geo-ip"
-BLOCKED_COUNTRIES = ["CN", "RU"] #(China, Russia)
+GEOIP_PATH = 'geo-ip'
+BLOCKED_COUNTRIES = ["CN", "RU","US"] #(China, Russia)
