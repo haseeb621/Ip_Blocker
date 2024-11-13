@@ -30,8 +30,8 @@ class CountryIpMiddleware:
 
     def __call__(self, request):
         # Uncomment to test with a simulated IP
-        simulated_ip = '8.8.8.8'
-        request.META['HTTP_X_FORWARDED_FOR'] = simulated_ip
+        # simulated_ip = '8.8.8.8'
+        # request.META['HTTP_X_FORWARDED_FOR'] = simulated_ip
       
         user_ip = request.META.get('REMOTE_ADDR')
         forwarded_user_ip = request.META.get('HTTP_X_FORWARDED_FOR')

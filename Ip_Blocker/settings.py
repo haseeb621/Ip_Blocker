@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-rs3(y4keina6&*3frig-jgbn*jdbq6$oxr@@uio%ez51a+)&1m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.ngrok-free.app','127.0.0.1']
 
 
 # Application definition
@@ -48,7 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'app.middleware.IpMiddleWare',
+    'app.middleware.IpMiddleWare',
     'app.middleware.CountryIpMiddleware'
 ]
 
@@ -127,4 +127,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # settings.py
 GEOIP_PATH = 'geo-ip'
-BLOCKED_COUNTRIES = ["CN", "RU","US"] #(China, Russia)
+BLOCKED_COUNTRIES = ["PK"]
